@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090910" />
+  <meta name="description" content="ARAM MAYHEM CHAMPIONSHIP — Official Tournament Portal" />
+  <title>ARAM MAYHEM CHAMPIONSHIP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="ARAM Mayhem home">
+      <span class="brand-mark">A</span><span>ARAM <b>MAYHEM</b><small>CHAMPIONSHIP</small></span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#home" data-nav="home">Tổng quan</a><a href="#teams" data-nav="teams">Đội tuyển</a>
+      <a href="#players" data-nav="players">Tuyển thủ</a><a href="#matches" data-nav="matches">Lịch đấu</a>
+      <a href="#ranking" data-nav="ranking">Xếp hạng</a>
+    </nav>
+    <button id="admin-open" class="btn btn-outline btn-small">ADMIN LOGIN <span>↗</span></button>
+    <button id="mobile-menu" class="mobile-menu" aria-label="Mở menu">☰</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> OFFICIAL TOURNAMENT PORTAL <i>•</i> SEASON 01</div>
+        <h1>ENTER THE<br><em>MAYHEM.</em></h1>
+        <p class="hero-sub">15 chiến binh. 3 đội tuyển. Một chiếc cúp vô địch.<br>Cuộc chiến ARAM Hỗn Loạn chính thức bắt đầu.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#matches">THEO DÕI GIẢI ĐẤU <span>↗</span></a><a class="btn btn-ghost" href="#teams">KHÁM PHÁ ĐỘI TUYỂN</a></div>
+        <div class="hero-meta"><div><strong>15</strong><span>TUYỂN THỦ</span></div><div><strong>03</strong><span>ĐỘI TUYỂN</span></div><div><strong>BO1</strong><span>THỂ THỨC</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Tournament emblem">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="hero-rune">A<span>M</span></div><div class="hero-side-label">HOWLING ABYSS / MAYHEM MODE</div>
+        <div class="hero-season">S<br><b>01</b></div>
+      </div>
+      <div class="hero-bottom"><span>01 / 05</span><span>THE RIFT IS CALLING</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="ticker"><div>ARAM MAYHEM <b>✦</b> ONE BRIDGE. THREE TEAMS. ONE CHAMPION. <b>✦</b> ARAM MAYHEM <b>✦</b> ONE BRIDGE. THREE TEAMS. ONE CHAMPION. <b>✦</b></div></section>
+
+    <section class="section-shell section-block" id="teams">
+      <div class="section-heading"><div><div class="eyebrow">01 / THE CONTENDERS</div><h2>CHOOSE YOUR <em>SIDE.</em></h2></div><span class="section-note">03 TEAMS / 05 PLAYERS EACH</span></div>
+      <div id="team-cards" class="team-grid"><div class="empty-state">Đang tải đội tuyển...</div></div>
+    </section>
+
+    <section class="section-shell section-block" id="players">
+      <div class="section-heading"><div><div class="eyebrow">02 / THE ROSTER</div><h2>THE <em>PLAYERS.</em></h2></div><span class="section-note">15 WARRIORS READY FOR BATTLE</span></div>
+      <div class="toolbar"><div class="search-wrap"><span>⌕</span><input id="player-search" placeholder="Tìm tuyển thủ..." /></div><span id="player-count" class="muted">0 / 15 PLAYERS</span></div>
+      <div id="player-list" class="player-grid"><div class="empty-state">Đang tải tuyển thủ...</div></div>
+    </section>
+
+    <section class="section-shell section-block" id="matches">
+      <div class="section-heading"><div><div class="eyebrow">03 / THE BATTLE PLAN</div><h2>MATCH <em>SCHEDULE.</em></h2></div><span class="section-note">ROUND ROBIN / BO1</span></div>
+      <div id="match-list" class="match-list"><div class="empty-state">Đang tải lịch thi đấu...</div></div>
+    </section>
+
+    <section class="section-shell section-block" id="ranking">
+      <div class="section-heading"><div><div class="eyebrow">04 / THE LEADERBOARD</div><h2>THE <em>RANKING.</em></h2></div><span class="section-note">3 PTS FOR A WIN</span></div>
+      <div class="ranking-wrap">
+        <div class="ranking-top"><span>CHAMPIONSHIP STANDINGS</span><span class="muted">LIVE TABLE <i class="live-dot"></i></span></div>
+        <div class="table-scroll"><table><thead><tr><th>HẠNG</th><th>ĐỘI TUYỂN</th><th>TRẬN</th><th>THẮNG</th><th>THUA</th><th>HIỆU SỐ</th><th>ĐIỂM</th></tr></thead><tbody id="ranking-body"><tr><td colspan="7" class="empty-state">Đang tải bảng xếp hạng...</td></tr></tbody></table></div>
+        <p class="ranking-foot">Xếp hạng: Điểm → Đối đầu trực tiếp → Hiệu số thắng/thua. Nếu vẫn hòa, Admin tổ chức trận BO1 phân định.</p>
+      </div>
+    </section>
+
+    <section class="section-shell champion-banner" id="champion-banner">
+      <div class="eyebrow">THE FINAL DESTINATION</div><h2>WHO WILL<br><em>RISE ABOVE?</em></h2><p>Every battle writes a story. Only one team claims the crown.</p>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="brand"><span class="brand-mark">A</span><span>ARAM <b>MAYHEM</b><small>CHAMPIONSHIP</small></span></div><span>UNOFFICIAL COMMUNITY TOURNAMENT</span><span>BUILT FOR THE MAYHEM © 2026</span></footer>
+
+  <div id="admin-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="admin-title">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel">
+      <button class="modal-close" data-close="true" aria-label="Đóng">×</button>
+      <div class="eyebrow">RESTRICTED ACCESS / ADMIN ONLY</div><h2 id="admin-title">CONTROL <em>ROOM.</em></h2>
+      <p class="muted">Đăng nhập để quản lý giải đấu.</p>
+      <form id="login-form" class="form-stack"><label>Email quản trị<input id="admin-email" type="email" autocomplete="username" placeholder="Email admin đã tạo trong Supabase" required></label><label>Mật khẩu<input id="admin-password" type="password" autocomplete="current-password" placeholder="Mật khẩu" required></label><button class="btn btn-primary" type="submit">ĐĂNG NHẬP <span>↗</span></button><div id="login-error" class="form-error"></div></form>
+    </div>
+  </div>
+
+  <section id="admin-panel" class="admin-panel hidden">
+    <div class="admin-head"><div><div class="eyebrow">TOURNAMENT MANAGEMENT</div><h2>ADMIN <em>CONTROL.</em></h2></div><div class="admin-head-actions"><span id="admin-identity" class="muted"></span><button id="logout" class="btn btn-outline btn-small">ĐĂNG XUẤT</button></div></div>
+    <div class="admin-tabs"><button class="active" data-tab="players-tab">Tuyển thủ</button><button data-tab="teams-tab">Đội tuyển</button><button data-tab="matches-tab">Kết quả</button></div>
+    <div id="players-tab" class="admin-tab">
+      <div class="admin-card"><h3>THÊM TUYỂN THỦ</h3><form id="add-player-form" class="inline-form"><input id="new-player-name" maxlength="40" placeholder="Tên tuyển thủ / nickname" required><button class="btn btn-primary" type="submit">+ THÊM</button></form><p class="hint">Tối đa 15 tuyển thủ. Có thể chỉnh sửa hoặc xóa từng người bên dưới.</p><div id="admin-player-list"></div></div>
+      <div class="admin-card"><h3>BỐC THĂM NGẪU NHIÊN</h3><p class="hint">Xáo trộn danh sách và chia thành 3 đội, mỗi đội 5 người. Thao tác này thay đổi đội hình hiện tại.</p><button id="draw-teams" class="btn btn-primary">✦ BỐC THĂM 3 ĐỘI</button><div id="draw-status" class="hint"></div></div>
+    </div>
+    <div id="teams-tab" class="admin-tab hidden"><div class="admin-card"><h3>QUẢN LÝ ĐỘI TUYỂN</h3><div id="admin-team-list"></div></div></div>
+    <div id="matches-tab" class="admin-tab hidden"><div class="admin-card"><h3>CẬP NHẬT KẾT QUẢ BO1</h3><p class="hint">Chọn đội thắng sau khi trận đấu kết thúc. Chọn “Chưa có kết quả” để xóa kết quả đã nhập.</p><div id="admin-match-list"></div></div></div>
+    <div class="admin-warning">Lưu ý: thay đổi được lưu lên cơ sở dữ liệu online và hiển thị cho tất cả người xem.</div>
+  </section>
+
+  <div id="toast" class="toast hidden"></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
